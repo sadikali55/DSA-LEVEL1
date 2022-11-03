@@ -6,9 +6,9 @@ function numPattern(n) {
         for (let j = 1; j <= sp; j++) {
             // if (j = (n/2) + 1) {
             //    process.stdout.write("*");
-          //  }
+            //  }
             // else {
-                process.stdout.write(" ");
+            process.stdout.write(" ");
             // }
         }
 
@@ -16,7 +16,7 @@ function numPattern(n) {
             process.stdout.write("*");
         }
         process.stdout.write("\n");
-        if (i <= (n / 2)-1) {
+        if (i <= (n / 2) - 1) {
             stars++;
         }
         else {
