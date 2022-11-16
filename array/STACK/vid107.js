@@ -34,6 +34,6 @@ function hasBalanceBrackets(equ) {
     }
 }
 // let str = "[[a+b)+{(c+d)*(e/f)}]";
-let str = "[{(c+d)*(e/f)}]";
+let str = "[[a+b)+{(c+d)*(e/f)}]";
 let resp = hasBalanceBrackets(str);
 console.log(str + "has balanced bracket:" + resp);

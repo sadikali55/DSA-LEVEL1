@@ -1,21 +1,32 @@
 const Stack = require("./Stack.js");
 
-function grattest(nums) {
-    const stack = new Stack();
-    let val = 0;
-    for (let i = 1; i <= nums.length; i++) {
-        let count = 1; (
-        for (let j = i + 1; j <= nums.length; j++)) {
-            val = nums[j];
-            if (stack.peek() < nums[j]) {
-                stack.pop();
-                count++;
-            }
-        }
-        if (nums[i] >= val) {
+function greatestTest(nums) {
+
+    let stack = new Stack();
+    for (let i = nums.length-1; i >= 0; i--) {
+        let val = nums[i];
+        if (stack.isEmpty()) {
+            stack.push(val);
             console.log(-1);
+        }
+        else if (stack.peek() > val) {
+            console.log(stack.peek());
+            stack.push(val);
+            // stack.pop();
+        }
+        else {
+            while (stack.peek() < val) {
+                stack.pop();
+                if (stack.isEmpty()) {
+                    console.log(-1);
+                    stack.push(val);
+                }
+                else if(stack.peek()> val){
+                    console.log(stack.peek());
+                }
+            }
         }
 
     }
 }
-grattest([2, 5, 7, 9, 3, 1, 12, 6, 8, 7])
+greatestTest([2, 5, 9, 3, 1, 12, 6, 8, 7])
