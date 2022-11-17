@@ -6,7 +6,7 @@ module.exports = class Stack {
         this.items.push(item);
     }
     pop() {
-        this.items.pop();
+        return this.items.pop();
     }
     peek() {
     
